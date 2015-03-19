@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Students</h1>
+
+
+<div class="row">
+      <% @students.each do |student| %>
+        <div class="col-md-4">
+            <h2><%= student.name %></h2>
+            <% if student.avatar_file_name != nil %>
+              <%= image_tag student.avatar.url(:thumb) %>
+            <% end %>
+            <p><%= student.age %></p>
+            <p><%= student.subject %></p>
+            <p><%= student.grade %></p>
+            <p><%= link_to 'Show', student %></p>
+            <p><%= link_to 'Edit', edit_student_path(student) %></p>
+            <p><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          </div>
+      <% end %>
+    
+</div>
+ 
+
+<br>
+
+<%= link_to 'New Student', new_student_path %>

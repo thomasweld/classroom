@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Classroom</title>
+
+
+	  <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+  
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<p><%= link_to "Home", root_path %></p>
+<p><%= link_to "Students", students_path %></p>
+<p><%= link_to "Teachers", teachers_path %></p>
+<p><%= link_to "Pets", pets_path %></p>
+
+<%= yield %>
+
+</body>
+</html>
